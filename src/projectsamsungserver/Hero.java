@@ -13,7 +13,7 @@ TODO:
     Ссылка на бога
     Арсенал и гардероб
     Фракция(Хаос/Порядок)
-        Хаос получает бонус к урону ночью
+        Хаос получает бонус к урону ночью (+ бонус к использованию проклятых предметов)
         Порядок получает бонус к урону днём (+ порядочный герой с бОльшей вероятностью выполнит повеление своего бога)
         + различные уникальные плюшки каждой фракции
     Классификация героя соответственно фракции:
@@ -31,11 +31,15 @@ TODO:
 */
 package projectsamsungserver;
 
-public class Hero
+import interfaces.ICreature;
+
+public class Hero implements ICreature
 {
+    
     private String name;
     private int base_damage, base_hp, base_armor; //Базовые значения без учёта баффов/вооружения/навыков. У магов также есть показатель маны
     private int damage, hp, armor;                //Конечные значения после всех модификаций
-    private int damage_effect, armor_effect;//Бонусные добавки
+    private int damage_effect, armor_effect;      //Бонусные добавки
+    
     
 }
