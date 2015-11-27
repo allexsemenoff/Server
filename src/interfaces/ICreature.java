@@ -15,5 +15,5 @@ public interface ICreature
     public void doSomeShit();//Основная жизненная цель существа(Функция действия)
     public void goToLocation(ILocation location);//Переход по локациям
     public ILocation getLocation();//Получить текущую локацию существа
-    
+    public void heal(int heal);
 }

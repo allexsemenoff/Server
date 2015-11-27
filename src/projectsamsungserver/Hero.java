@@ -34,7 +34,8 @@ package projectsamsungserver;
 public class Hero
 {
     private String name;
-    private int base_damage, base_hp, base_armor; //Базовые значения без учёта баффов/вооружения/навыков
+    private int base_damage, base_hp, base_armor; //Базовые значения без учёта баффов/вооружения/навыков. У магов также есть показатель маны
     private int damage, hp, armor;                //Конечные значения после всех модификаций
+    private int damage_effect, armor_effect;//Бонусные добавки
     
 }
