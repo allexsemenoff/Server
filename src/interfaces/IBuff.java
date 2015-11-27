@@ -1,8 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+ 	Баффы - эффекты, которые улучшают или ухудшают параметры персонажа. 
+ 	Некоторые баффы нельзя снять, например, пассивные эффекты умений
+*/
 package interfaces;
 
 /**
@@ -11,5 +10,9 @@ package interfaces;
  */
 public interface IBuff
 {
-    public void update();
+	public boolean isRemovable();//Проверка на снимаемость баффа
+	public void apply(ICreature target);//Применить бафф на персонажа 
+	public void remove();//Снять бафф
+	public int getDuration(); //Получить длительность баффа
+    public void update(); //Проверка окончания баффа
 }

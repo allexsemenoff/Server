@@ -31,15 +31,95 @@ TODO:
 */
 package projectsamsungserver;
 
+import java.util.ArrayList;
+
+import interfaces.IBuff;
 import interfaces.ICreature;
 
 public class Hero implements ICreature
 {
-    
+	private ArrayList<IBuff> buffs; 
+    private ArrayList<Item> inventory;
+    private Location location;
     private String name;
+    private ICreature target;
     private int base_damage, base_hp, base_armor; //Базовые значения без учёта баффов/вооружения/навыков. У магов также есть показатель маны
     private int damage, hp, armor;                //Конечные значения после всех модификаций
     private int damage_effect, armor_effect;      //Бонусные добавки
-    
-    
+	@Override
+	public ArrayList<Item> getInventory()
+	{
+		return this.inventory; 
+	}
+	@Override
+	public void grabItem(Item item)
+	{	 
+		if(this.location.getItems().contains(item))
+		{
+			this.inventory.add(item);
+			this.location.removeItem(item);
+		}
+	}
+	@Override
+	public void dropItem(Item item)
+	{	 
+		this.inventory.remove(item);
+		this.location.addItem(item);
+	}
+	@Override
+	public void attack() 
+	{
+		 	target.takeDamage(damage);
+	}
+	@Override
+	public void setTarget(ICreature target) {
+		 this.target = target;
+		
+	}
+	@Override
+	public ICreature getTarget() { 
+		return this.target;
+	}
+	@Override
+	public boolean isAlive()
+	{
+		 	if(this.hp > 0) return true;
+		 	else return false;
+	}
+	@Override
+	public void doSomeShit() {
+		 
+	}
+	
+	@Override
+	public Location getLocation() {
+		 return this.location;
+	}
+	@Override
+	public void heal(int heal) {
+		 this.hp += heal;
+	}
+	@Override
+	public ArrayList<IBuff> getBuffs() {
+		return this.buffs;
+	}
+	@Override
+	public void updateBuffs() {
+		 for(IBuff buff : this.buffs)
+		 {
+			buff.update(); 
+		 }
+	}
+	@Override
+	public void goToLocation(Location location) {
+		if((Math.abs(this.location.getX() - location.getX()) <= 1 ) && (Math.abs(this.location.getY() - location.getY()) <= 1))
+				{
+			this.location = location;
+				}
+		
+	}
+	@Override
+	public void takeDamage(int damage) {
+		this.hp -= damage;		
+	}
 }
