@@ -5,13 +5,13 @@
  */
 package interfaces;
 
-import projectsamsungserver.Hero;
-
 /**
  *
  * @author zaqwer
  */
-public interface IEquippable
+
+//Уровень противника будет подстраиваться под уровень героя
+public interface IEnemy extends ICreature
 {
-    public void equip(Hero hero);
+    public void update();
 }
