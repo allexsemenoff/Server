@@ -15,7 +15,6 @@ import interfaces.IUsable;
 public class PotionHeal extends Item implements IUsable
 {
     private int effect;
-    
     /**
      *
      * @param id
