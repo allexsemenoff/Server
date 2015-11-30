@@ -3,11 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/zaqwer/NetBeansProjects/ProjectSamsungServer/src/interfaces/ILocation.java</file>
-            <file>file:/home/zaqwer/NetBeansProjects/ProjectSamsungServer/src/projectsamsungserver/ProjectSamsungServer.java</file>
-            <file>file:/home/zaqwer/NetBeansProjects/ProjectSamsungServer/src/interfaces/IGod.java</file>
-            <file>file:/home/zaqwer/NetBeansProjects/ProjectSamsungServer/src/interfaces/ICreature.java</file>
-            <file>file:/home/zaqwer/NetBeansProjects/ProjectSamsungServer/src/projectsamsungserver/Hero.java</file>
+            <file>file:/home/zaqwer/NetBeansProjects/Server/src/projectsamsungserver/Hero.java</file>
+            <file>file:/home/zaqwer/NetBeansProjects/Server/src/projectsamsungserver/PotionHeal.java</file>
+            <file>file:/home/zaqwer/NetBeansProjects/Server/src/interfaces/IBuff.java</file>
+            <file>file:/home/zaqwer/NetBeansProjects/Server/src/projectsamsungserver/Location.java</file>
+            <file>file:/home/zaqwer/NetBeansProjects/Server/src/interfaces/IEnemy.java</file>
+            <file>file:/home/zaqwer/NetBeansProjects/Server/src/interfaces/ICreature.java</file>
+            <file>file:/home/zaqwer/NetBeansProjects/Server/src/projectsamsungserver/ProjectSamsungServer.java</file>
+            <file>file:/home/zaqwer/NetBeansProjects/Server/src/projectsamsungserver/Item.java</file>
         </group>
     </open-files>
 </project-private>

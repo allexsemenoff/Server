@@ -23,4 +23,5 @@ public class BuffAttack extends Buff
     {
         target.takeDamage(this.getPower());
     }
+
 }

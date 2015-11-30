@@ -6,37 +6,8 @@
 package projectsamsungserver;
 
 import interfaces.ICreature;
-<<<<<<< HEAD
-=======
-
->>>>>>> fb677f8f7bd19a7417d55ae7c806253ae11cd6a2
 import java.util.ArrayList;
 
-/**
- *
- * @author zaqwer
-<<<<<<< HEAD
-TODO:
-* Добавить массив сражений проходящих в локации
- 
- */
-public class Location
-{
-    private int x,y; //Координаты локации на карте мира
-    private ArrayList<ICreature> members;//Участники локации
-    private ArrayList<Item> items;//Предметы, лежащие в локации
-    
-    private String name; //Имя локации, если есть
-    
-    public Location(int x, int y)
-    {
-        this.members = new ArrayList<>();
-        this.items = new ArrayList<>();
-        this.x = x;
-        this.y = y;
-    }
-=======
- */
 public class Location
 {
 	private ArrayList<Item> items;
@@ -90,5 +61,4 @@ public class Location
 		return this.members;
 	}
 
->>>>>>> fb677f8f7bd19a7417d55ae7c806253ae11cd6a2
 }
